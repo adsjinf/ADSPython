@@ -1,0 +1,28 @@
+<Layout1>:
+    orientation: 'vertical'
+    #orientation: 'horizontal'
+    MyButton:
+        text: 'bt1'
+        size_hint_x: .5
+    MyButton:
+        text: 'bt2'
+        size_hint_x: .5
+
+    MyButton:
+        text: 'bt3'
+
+<MyButton@Button>:
+    background_normal: ''
+    background_down: ''
+    background_color: 0.275, 0.51, 0.706, 1
+    on_press:
+        self.background_color =0.529, 0.808, 0.98, 1  # Cor ao pressionar
+    on_release:
+        self.background_color = 0.275, 0.51, 0.706, 1  # Volta para a cor original
+    canvas.before:
+        Color:
+            rgba: 0.5, 0.5, 0.5, 1  # Cor cinza para a borda
+        Line:
+            width: 2
+            rectangle: self.x, self.y, self.width, self.height
+            #rounded_rectangle: self.x, self.y, self.width, self.height, 10 # raio = 10
