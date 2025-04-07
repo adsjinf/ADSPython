@@ -1,0 +1,50 @@
+<TelaPrincipal>:
+    orientation: 'vertical'
+    padding: 20
+    spacing: 10
+
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1  # Fundo branco
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    BoxLayout:
+        size_hint_y: None
+        height: 40
+
+        Label:
+            text: "Sistema de cadastro"
+            color: 0, 0, 0, 1  # Texto preto
+            halign: 'center'
+            valign: 'middle'
+            size_hint_x: 1
+            text_size: self.size
+            canvas.before:
+                Color:
+                    rgba: 0.53, 0.81, 0.98, 1  # Fundo azul céu
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+        Button:
+            text: "X"
+            size_hint_x: None
+            width: 100
+            background_normal: ''
+            background_color: 0.53, 0.81, 0.98, 1  # Fundo azul céu
+            color: 1, 1, 1, 1  # Texto branco
+            on_release: root.fechar_app()
+
+    TextInput:
+        hint_text: "Nome"
+        multiline: False
+        size_hint_y: None
+        height: 40
+
+    TextInput:
+        hint_text: "Telefone"
+        multiline: False
+        size_hint_y: None
+        height: 40

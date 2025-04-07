@@ -1,15 +1,21 @@
 <Layout1>:
-    orientation: 'vertical'
+    canvas:
+        Rectangle:
+            source: 'imagem_fundo.jpg'  # Coloque a imagem na mesma pasta
+            pos: self.pos
+            size: self.size
+           
+    #orientation: 'vertical'
     #orientation: 'horizontal'
-    MyButton:
-        text: 'bt1'
-        size_hint_x: .5
-    MyButton:
-        text: 'bt2'
-        size_hint_x: .5
+        MyButton:
+            text: 'bt1'
+            size_hint_x: .5
+        MyButton:
+            text: 'bt2'
+            size_hint_x: .5
 
-    MyButton:
-        text: 'bt3'
+        MyButton:
+            text: 'bt3'
 
 <MyButton@Button>:
     background_normal: ''
